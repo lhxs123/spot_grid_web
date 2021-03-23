@@ -16,7 +16,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'l%zj^i4gdl1dj-ehbi5%la#xfa-&be3rsut$2%4l*^rbl@74)('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = []
 
 BINANCE_CONFIG = {
@@ -35,13 +33,11 @@ BINANCE_CONFIG = {
     "recv_window": 5000
 }
 
-
-
 # https://apscheduler.readthedocs.io/en/latest/userguide.html 设置文档
 SCHEDULER_CONFIG = {
     "apscheduler.jobstores.default": {
         "class": "django_apscheduler.jobstores:DjangoJobStore",
-    'type': 'sqlalchemy',
+        'type': 'sqlalchemy',
         'url': 'sqlite:///db.sqlite3'
     },
     'apscheduler.executors.processpool': {
@@ -100,7 +96,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'spot_grid_web.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -110,7 +105,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -130,7 +124,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -143,7 +136,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
